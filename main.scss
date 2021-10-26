@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    .container{
+        width: 1100px;
+        margin: auto;
+        display: flex;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+        overflow-x: auto;
+        .column{
+            position: relative;
+            width: 19%;
+            height: fit-content;
+            background-color: lightgray;
+            padding: 15px;
+            margin: 10px;
+            .column-title{
+                font-weight: bold;
+            }
+            .tasks-wrapper{
+                .containerc{
+                    padding: 7px;
+                    background-color: white;
+                    margin: 5px 0;
+                    border-radius: 5px;
+                    position: relative;
+                    display: flex;
+                    // word-wrap:;
+                    .task-name{
+
+                    }
+
+                    &:hover{
+                        .action-box{
+                            display: block;
+                        }
+                    }
+                    .action-box{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        display: none;
+                        button{
+                            width: 30px;
+                            padding: 3px;
+                          img{
+                              width: 100%;
+                          }  
+                        }
+                    }
+                }
+            }
+                .add-task-box{
+                    display: flex;
+                    justify-content: space-between;
+                    input{
+                        padding: 5px;
+                        width: calc(100% - 65px);
+                    }
+                    button{
+                        width: 60px;
+                        padding: 5px;
+                    }
+                }
+                .delete-column{
+                    display: flex;
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    border-radius: 50%;
+                }
+        }
+    }
+}
